@@ -29,27 +29,27 @@ Deduplicates using: zone name, x, z, r, and d (defaults to "2")
 Outputs: chernarusplus_injected.xml cleanly formatted
 
 📁 Folder Structure
-plaintext
+<pre> \\\plaintext 
 project_root/
 ├── input/
 │   ├── chernarusplus.xml          ← main CE territory file to inject into
-│   ├── zombie_territories.xml     ← territory blocks to be injected
+│   ├── zombie_territories.xml     ← zombie territory packs
 │   └── grizzlys.xml               ← animal-type packs
 │
 ├── output/
-│   └── chernarusplus_injected.xml
+│   └── chernarusplus_injected.xml  ← result after injection
 │
 ├── backup/
-│   └── chernarusplus_backup.xml
+│   └── chernarusplus_backup.xml    ← original CE file (pre-injection)
 │
 ├── logs/
-│   └── run.log
+│   └── run.log                     ← summary of each injection run
 │
 ├── utils/
 │   ├── logger.py
 │   └── color_generator.py
 │
-└── main.py
+└── main.py                         ← entry point for the tool \\\ </pre>
 ⚙ How It Works Internally
 💡 Injection Logic
 Zombie files → inject into zombie_territories
