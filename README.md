@@ -1,7 +1,7 @@
-#🧰 Territory Injector for DayZ CE
+# 🧰 Territory Injector for DayZ CE
 Injects territory definitions (zombies, animals, custom packs) from modular XML files into a master chernarusplus.xml CE territory file — cleanly, safely, and without duplication.
 
-##🧠 What This Tool Does
+## 🧠 What This Tool Does
 Parses all .xml territory files in /input/ (except chernarusplus.xml)
 
 Classifies each file:
@@ -28,7 +28,7 @@ Deduplicates using: zone name, x, z, r, and d (defaults to "2")
 
 Outputs: chernarusplus_injected.xml cleanly formatted
 
-###📁 Folder Structure
+## 📁 Folder Structure
 <pre> \\\plaintext 
 project_root/
 ├── input/
@@ -51,7 +51,7 @@ project_root/
 │
 └── main.py                         ← entry point for the tool \\\ </pre>
 ⚙ How It Works Internally
-####💡 Injection Logic
+## 💡 Injection Logic
 Zombie files → inject into zombie_territories
 
 If territory name is missing, uses first zone’s name
@@ -62,7 +62,7 @@ New <territory-type> is created if needed
 
 Territory name defaults to file name
 
-#####🔍 Zone Deduplication Logic
+## 🔍 Zone Deduplication Logic
 Two zones are considered duplicates if all of the following match:
 
 Attribute	Notes
@@ -73,7 +73,7 @@ r	Spawn radius
 d	Defaults to "2" if not present
 This prevents subtle duplicates caused by inconsistencies in d values.
 
-######📝 Log Output Example
+## 📝 Log Output Example
 plaintext
 📦 Backup created: backup/chernarusplus_backup.xml
 ✅ Parsed 3 blocks from zombie_territories.xml
@@ -99,7 +99,7 @@ Save output in /output/
 
 ❗ Don’t edit chernarusplus.xml manually. The tool handles injection, safety checks, and formatting.
 
-#######🚨 Requirements
+## 🚨 Requirements
 Input files must be valid XML
 
 Each <territory> must contain at least one <zone> with x and z attributes
