@@ -29,7 +29,7 @@ Deduplicates using: zone name, x, z, r, and d (defaults to "2")
 Outputs: chernarusplus_injected.xml cleanly formatted
 
 ## 📁 Folder Structure
-<pre> \\\plaintext 
+<pre> 
 project_root/
 ├── input/
 │   ├── chernarusplus.xml          ← main CE territory file to inject into
@@ -49,7 +49,7 @@ project_root/
 │   ├── logger.py
 │   └── color_generator.py
 │
-└── main.py                         ← entry point for the tool \\\ </pre>
+└── main.py                         ← entry point for the tool  </pre>
 ⚙ How It Works Internally
 ## 💡 Injection Logic
 Zombie files → inject into zombie_territories
@@ -74,7 +74,7 @@ d	Defaults to "2" if not present
 This prevents subtle duplicates caused by inconsistencies in d values.
 
 ## 📝 Log Output Example
-plaintext
+<pre>
 📦 Backup created: backup/chernarusplus_backup.xml
 ✅ Parsed 3 blocks from zombie_territories.xml
 ✔ Injected 12 zones into zombie_territories (InfectedVillageTier1)
@@ -83,6 +83,7 @@ plaintext
 🟡 3 zones skipped (already exist).
 📄 Output saved to: output/chernarusplus_injected.xml
 ➕ How to Add New Territories
+</pre>
 Drop your new XML file into the /input/ folder Example: firewolves.xml, fantazywolf.xml, zombie_newtown.xml
 
 Run the tool — it will:
